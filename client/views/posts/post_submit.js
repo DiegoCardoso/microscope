@@ -6,10 +6,17 @@ Template.postSubmit.events({
             message: e.target.message.value
         };
 
-        post._id = Posts.insert(post);
-
         e.preventDefault();
 
-        return Router.go('postPage', post);
+
+        Meteor.call('post', post, function (err, id) {
+            if (err) {
+                return alert(err.reason);
+            }
+
+            post._id = id;
+
+            return Router.go('postPage', post);
+        });
     }
 });
