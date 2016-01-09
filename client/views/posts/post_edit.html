@@ -1,0 +1,16 @@
+<template name="postEdit">
+    <form action="" class="main">
+        <div class="form-group"><label for="url" class="control-label">URL</label>
+            <input type="url"  class="form-control" name="url" value="{{url}}" placeholder="Your URL">
+        </div>
+        <div class="form-group"><label for="title" class="control-label">Title</label>
+            <input type="text"  class="form-control" name="title" value="{{title}}" placeholder="Name your post">
+        </div>
+        <div class="form-group">
+            <div class="controls"><input type="submit" value="Submit" class="btn btn-primary"></div>
+        </div>
+        <div class="form-group">
+            <div class="controls"><a href="#" class="btn btn-danger delete">Delete post</a></div>
+        </div>
+    </form>
+</template>
